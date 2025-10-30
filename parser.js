@@ -465,11 +465,10 @@ class TransactionParser {
     
     // Get example transactions in proper format
     getExampleTransactions() {
-        return `9/8/2025 0:57:11\t3,989.50\tBTC
+        return `9/8/2025 0:57:11\t0.0857463\tBTC
 9/10/2025 17:44:11\t2.062399\tETH  
 9/15/2025 20:15:11\t15,000\tUSDC
-9/19/2025 17:56:11\t20,500.75\tUSDT
-3/10/2022 16:45:00\t1,234.567\tADA`;
+9/19/2025 17:56:11\t20,500.75\tUSDT`;
     }
     
     // Get supported date formats
