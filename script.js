@@ -65,7 +65,7 @@ class CryptoConverter {
             this.bindEvents();
             
             // Show ready message
-            this.showToast(Utils.t('success') + '!', 'success');
+            //this.showToast(Utils.t('success') + '!', 'success');
             
             console.log('✅ CryptoBot Converter initialized successfully');
             
