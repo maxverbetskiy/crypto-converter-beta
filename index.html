@@ -10,14 +10,42 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="theme-dark">
+    <!-- Premium Status Bar -->
+    <div class="status-bar">
+        <div class="container">
+            <div class="status-items">
+                <div class="status-item">
+                    <span class="status-dot online"></span>
+                    <span>API Active</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-dot pulse"></span>
+                    <span>Real-time Data</span>
+                </div>
+                <div class="status-item">
+                    <i class="fas fa-shield-check"></i>
+                    <span>Secured Connection</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Animated Background Grid -->
     <div class="bg-grid"></div>
-    
+
     <!-- Premium Background Effects -->
     <div class="bg-effects">
         <div class="glow-orb glow-orb-1"></div>
         <div class="glow-orb glow-orb-2"></div>
         <div class="glow-orb glow-orb-3"></div>
+    </div>
+
+    <!-- Floating Shapes -->
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
     </div>
 
     <!-- Header Navigation -->
@@ -28,13 +56,15 @@
                 <div class="logo-group">
                     <div class="logo-icon-wrapper">
                         <i class="fas fa-cube"></i>
+                        <div class="logo-pulse"></div>
                     </div>
                     <div class="logo-text">
                         <h1 class="logo-title">CRYPTOBOT</h1>
                         <span class="logo-subtitle" data-translate="subtitle">Converter</span>
+                        <div class="logo-premium-badge">PREMIUM</div>
                     </div>
                 </div>
-                
+
                 <!-- Header Controls -->
                 <div class="header-controls">
                     <!-- Language Switcher -->
@@ -44,19 +74,26 @@
                             <span id="currentLang">EN</span>
                         </button>
                         <div id="langDropdown" class="dropdown-menu" style="display: none;">
+                            <div class="dropdown-header">
+                                <i class="fas fa-language"></i>
+                                Select Language
+                            </div>
                             <button onclick="switchLanguage('en')" class="dropdown-item">
-                                <span class="flag">🇺🇸</span> English
+                                <span class="flag">🇺🇸</span>
+                                <span>English</span>
+                                <span class="checkmark"><i class="fas fa-check"></i></span>
                             </button>
                             <button onclick="switchLanguage('ru')" class="dropdown-item">
-                                <span class="flag">🇷🇺</span> Русский
+                                <span class="flag">🇷🇺</span>
+                                <span>Русский</span>
+                                <span class="checkmark"><i class="fas fa-check"></i></span>
                             </button>
                         </div>
                     </div>
-                    
-                    <!-- Theme Switcher -->
                 </div>
             </div>
         </div>
+        <div class="header-line"></div>
     </header>
 
     <!-- Main Content -->
@@ -74,21 +111,60 @@
                         <br>
                         <span class="text-accent" data-translate="hero_subtitle">Transaction Converter</span>
                     </h2>
+                    <div class="title-decoration"></div>
                     <p class="hero-description" data-translate="hero_description">
                         Convert your cryptocurrency transactions to USD using real-time CryptoCompare API data
                     </p>
+
+                    <!-- Premium Stats -->
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-icon"><i class="fas fa-coins"></i></div>
+                            <div class="stat-info">
+                                <div class="stat-number">2000+</div>
+                                <div class="stat-label">Cryptocurrencies</div>
+                            </div>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <div class="stat-icon"><i class="fas fa-clock"></i></div>
+                            <div class="stat-info">
+                                <div class="stat-number">99.9%</div>
+                                <div class="stat-label">Uptime</div>
+                            </div>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <div class="stat-icon"><i class="fas fa-bolt"></i></div>
+                            <div class="stat-info">
+                                <div class="stat-number">Real-time</div>
+                                <div class="stat-label">Data Feed</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             <!-- Premium Converter Card -->
             <section class="converter-section">
                 <div class="converter-card">
+                    <div class="card-corner top-left"></div>
+                    <div class="card-corner top-right"></div>
+                    <div class="card-corner bottom-left"></div>
+                    <div class="card-corner bottom-right"></div>
+
+                    <!-- Premium Card Header -->
                     <div class="card-header-premium">
                         <div class="header-info">
-                            <h3 class="card-title">
-                                <i class="fas fa-chart-line"></i>
-                                <span data-translate="converter_title">Transaction Converter</span>
-                            </h3>
+                            <div class="card-title-group">
+                                <div class="title-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h3 class="card-title">
+                                    <span data-translate="converter_title">Transaction Converter</span>
+                                    <div class="premium-tag">PRO</div>
+                                </h3>
+                            </div>
                             <p class="card-subtitle" data-translate="converter_subtitle">
                                 Enter your cryptocurrency transactions below
                             </p>
@@ -106,7 +182,7 @@
                                     id="transactionsInput" 
                                     class="form-textarea-premium"
                                     data-translate-placeholder="textarea_placeholder"
-                                    placeholder="9/8/2025 0:57:11&#9;3,989.50&#9;BTC&#10;9/10/2025 17:44:11&#9;2.062399&#9;ETH&#10;9/15/2025 20:15:11&#9;15,000&#9;USDC"
+                                    placeholder="9/8/2025 0:57:11&#9;0.0826746&#9;BTC&#10;9/10/2025 17:44:11&#9;2.062399&#9;ETH&#10"
                                     rows="10"
                                 ></textarea>
                                 <div class="format-hint">
@@ -124,7 +200,6 @@
                             <button type="submit" class="btn-action btn-primary" id="convertBtn">
                                 <span class="btn-label" data-translate="convert_button">Convert to USD</span>
                                 <i class="fas fa-arrow-right"></i>
-                                <div class="btn-shine"></div>
                             </button>
                         </div>
                     </form>
@@ -134,12 +209,15 @@
             <!-- Loading Section -->
             <div id="loadingSection" class="loading-section-premium" style="display: none;">
                 <div class="loader-premium">
-                    <div class="spinner"></div>
+                    <div class="spinner-container">
+                        <div class="spinner"></div>
+                        <div class="spinner-inner"></div>
+                    </div>
                     <div class="loader-info">
                         <p id="loadingText" class="loading-text" data-translate="loading_text">Converting transactions...</p>
                     </div>
                 </div>
-                
+
                 <div id="progressContainer" class="progress-section-premium" style="display: none;">
                     <div class="progress-header">
                         <span id="progressText" data-translate="progress_text">Processing</span>
@@ -155,13 +233,17 @@
             <section id="resultsSection" class="results-section-premium" style="display: none;">
                 <div class="results-header-premium">
                     <div class="results-title-group">
-                        <i class="fas fa-chart-bar"></i>
+                        <div class="title-icon-wrapper">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
                         <h3 class="results-title" data-translate="results_title">Conversion Results</h3>
+                        <div class="results-badge">COMPLETED</div>
                     </div>
-                    
+
                     <!-- Premium Summary Grid -->
                     <div class="summary-grid-premium">
                         <div class="summary-card-premium total">
+                            <div class="card-glow"></div>
                             <div class="card-inner">
                                 <div class="card-icon">
                                     <i class="fas fa-dollar-sign"></i>
@@ -171,9 +253,9 @@
                                     <div id="totalValue" class="card-value">$0.00</div>
                                 </div>
                             </div>
-                            <div class="card-accent"></div>
                         </div>
                         <div class="summary-card-premium success">
+                            <div class="card-glow"></div>
                             <div class="card-inner">
                                 <div class="card-icon">
                                     <i class="fas fa-check-circle"></i>
@@ -183,9 +265,9 @@
                                     <div id="successCount" class="card-value">0</div>
                                 </div>
                             </div>
-                            <div class="card-accent"></div>
                         </div>
                         <div class="summary-card-premium error">
+                            <div class="card-glow"></div>
                             <div class="card-inner">
                                 <div class="card-icon">
                                     <i class="fas fa-exclamation-triangle"></i>
@@ -195,12 +277,11 @@
                                     <div id="errorCount" class="card-value">0</div>
                                 </div>
                             </div>
-                            <div class="card-accent"></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Results List with Premium Layout -->
+                <!-- Results List -->
                 <div id="resultsContainer" class="results-list-premium">
                     <!-- Results will be inserted here -->
                 </div>
@@ -220,9 +301,18 @@
 
             <!-- Info Section -->
             <section class="info-section-premium">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3 class="section-title">Technical Specifications</h3>
+                    <div class="section-line"></div>
+                </div>
+
                 <div class="info-grid-premium">
                     <!-- Date Formats Card -->
                     <div class="info-card-premium">
+                        <div class="card-border"></div>
                         <div class="info-card-header">
                             <div class="info-icon">
                                 <i class="fas fa-calendar-alt"></i>
@@ -247,6 +337,7 @@
 
                     <!-- Number Formats Card -->
                     <div class="info-card-premium">
+                        <div class="card-border"></div>
                         <div class="info-card-header">
                             <div class="info-icon">
                                 <i class="fas fa-calculator"></i>
@@ -271,6 +362,7 @@
 
                     <!-- Cryptocurrencies Card -->
                     <div class="info-card-premium">
+                        <div class="card-border"></div>
                         <div class="info-card-header">
                             <div class="info-icon">
                                 <i class="fas fa-coins"></i>
@@ -278,14 +370,14 @@
                             <h4 class="info-title" data-translate="crypto_support_title">Supported Cryptocurrencies</h4>
                         </div>
                         <div class="crypto-badge-group">
-                            <span class="badge"><i class="fab fa-bitcoin"></i> BTC</span>
-                            <span class="badge"><i class="fab fa-ethereum"></i> ETH</span>
-                            <span class="badge">ADA</span>
-                            <span class="badge">SOL</span>
-                            <span class="badge">BNB</span>
-                            <span class="badge">XRP</span>
-                            <span class="badge">DOT</span>
-                            <span class="badge">LINK</span>
+                            <span class="crypto-badge"><i class="fab fa-bitcoin"></i> BTC</span>
+                            <span class="crypto-badge"><i class="fab fa-ethereum"></i> ETH</span>
+                            <span class="crypto-badge">ADA</span>
+                            <span class="crypto-badge">SOL</span>
+                            <span class="crypto-badge">BNB</span>
+                            <span class="crypto-badge">XRP</span>
+                            <span class="crypto-badge">DOT</span>
+                            <span class="crypto-badge">LINK</span>
                         </div>
                         <p class="info-note" data-translate="crypto_note">
                             + 2000+ other cryptocurrencies via CryptoCompare
@@ -295,6 +387,37 @@
             </section>
         </div>
     </main>
+
+    <!-- Premium Footer -->
+    <footer class="footer-premium">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <i class="fas fa-cube"></i>
+                        <span>CRYPTOBOT</span>
+                    </div>
+                    <p class="footer-text">Professional cryptocurrency conversion platform</p>
+                </div>
+                <div class="footer-right">
+                    <div class="security-badges">
+                        <div class="security-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>SSL Secured</span>
+                        </div>
+                        <div class="security-badge">
+                            <i class="fas fa-lock"></i>
+                            <span>Encrypted</span>
+                        </div>
+                        <div class="security-badge">
+                            <i class="fas fa-bolt"></i>
+                            <span>High Performance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Toast Container -->
     <div id="toastContainer" class="toast-container"></div>
