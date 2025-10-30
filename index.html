@@ -6,57 +6,54 @@
     <title>CryptoBot Converter - CryptoCompare Edition</title>
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="theme-dark">
-    <!-- Background Effects -->
+    <!-- Animated Background Grid -->
+    <div class="bg-grid"></div>
+    
+    <!-- Premium Background Effects -->
     <div class="bg-effects">
-        <div class="bg-gradient"></div>
-        <div class="bg-particles">
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-        </div>
+        <div class="glow-orb glow-orb-1"></div>
+        <div class="glow-orb glow-orb-2"></div>
+        <div class="glow-orb glow-orb-3"></div>
     </div>
 
-    <!-- Header -->
+    <!-- Header Navigation -->
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <div class="logo">
-                    <div class="logo-icon">
-                        <i class="fas fa-coins"></i>
+                <!-- Premium Logo -->
+                <div class="logo-group">
+                    <div class="logo-icon-wrapper">
+                        <i class="fas fa-cube"></i>
                     </div>
                     <div class="logo-text">
-                        <h1>CryptoBot</h1>
-                        <span data-translate="subtitle">Converter</span>
+                        <h1 class="logo-title">CRYPTOBOT</h1>
+                        <span class="logo-subtitle" data-translate="subtitle">Converter</span>
                     </div>
                 </div>
                 
-                <div class="header-actions">
+                <!-- Header Controls -->
+                <div class="header-controls">
                     <!-- Language Switcher -->
-                    <div class="language-switcher">
-                        <button id="langBtn" class="btn btn-ghost">
+                    <div class="control-group">
+                        <button id="langBtn" class="control-btn">
                             <i class="fas fa-globe"></i>
                             <span id="currentLang">EN</span>
                         </button>
-                        <div id="langDropdown" class="dropdown" style="display: none;">
+                        <div id="langDropdown" class="dropdown-menu" style="display: none;">
                             <button onclick="switchLanguage('en')" class="dropdown-item">
-                                🇺🇸 English
+                                <span class="flag">🇺🇸</span> English
                             </button>
                             <button onclick="switchLanguage('ru')" class="dropdown-item">
-                                🇷🇺 Русский
+                                <span class="flag">🇷🇺</span> Русский
                             </button>
                         </div>
                     </div>
                     
                     <!-- Theme Switcher -->
-                    <button id="themeBtn" class="btn btn-ghost">
-                        <i class="fas fa-moon theme-icon-dark"></i>
-                        <i class="fas fa-sun theme-icon-light" style="display: none;"></i>
-                    </button>
                 </div>
             </div>
         </div>
@@ -65,146 +62,156 @@
     <!-- Main Content -->
     <main class="main">
         <div class="container">
-            <!-- Hero Section -->
+            <!-- Premium Hero Section -->
             <section class="hero">
                 <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        <span data-translate="hero_badge">Powered by CryptoCompare</span>
+                    </div>
                     <h2 class="hero-title">
-                        <span class="gradient-text" data-translate="hero_title">Cryptocurrency</span>
-                        <span class="hero-title-accent" data-translate="hero_subtitle">Transaction Converter</span>
+                        <span class="text-gradient" data-translate="hero_title">Cryptocurrency</span>
+                        <br>
+                        <span class="text-accent" data-translate="hero_subtitle">Transaction Converter</span>
                     </h2>
                     <p class="hero-description" data-translate="hero_description">
                         Convert your cryptocurrency transactions to USD using real-time CryptoCompare API data
                     </p>
-                    <div class="hero-badge">
-                        <i class="fas fa-shield-alt"></i>
-                        <span data-translate="hero_badge">Powered by CryptoCompare</span>
-                    </div>
                 </div>
             </section>
 
-            <!-- Converter Form -->
+            <!-- Premium Converter Card -->
             <section class="converter-section">
                 <div class="converter-card">
-                    <div class="card-header">
-                        <h3 class="card-title">
-                            <i class="fas fa-calculator"></i>
-                            <span data-translate="converter_title">Transaction Converter</span>
-                        </h3>
-                        <div class="card-subtitle" data-translate="converter_subtitle">
-                            Enter your cryptocurrency transactions below
+                    <div class="card-header-premium">
+                        <div class="header-info">
+                            <h3 class="card-title">
+                                <i class="fas fa-chart-line"></i>
+                                <span data-translate="converter_title">Transaction Converter</span>
+                            </h3>
+                            <p class="card-subtitle" data-translate="converter_subtitle">
+                                Enter your cryptocurrency transactions below
+                            </p>
                         </div>
                     </div>
 
                     <form id="converterForm" class="converter-form">
-                        <div class="form-group">
+                        <div class="form-group-premium">
                             <label for="transactionsInput" class="form-label">
                                 <i class="fas fa-file-alt"></i>
                                 <span data-translate="transactions_label">Transaction Data</span>
                             </label>
-                            <div class="textarea-wrapper">
+                            <div class="textarea-container">
                                 <textarea 
                                     id="transactionsInput" 
-                                    class="form-textarea"
+                                    class="form-textarea-premium"
                                     data-translate-placeholder="textarea_placeholder"
                                     placeholder="9/8/2025 0:57:11&#9;3,989.50&#9;BTC&#10;9/10/2025 17:44:11&#9;2.062399&#9;ETH&#10;9/15/2025 20:15:11&#9;15,000&#9;USDC"
-                                    rows="8"
+                                    rows="10"
                                 ></textarea>
-                                <div class="textarea-overlay">
-                                    <div class="format-help">
-                                        <i class="fas fa-question-circle"></i>
-                                        <span data-translate="format_help">Format: MM/DD/YYYY HH:mm:ss [TAB] amount [TAB] symbol</span>
-                                    </div>
+                                <div class="format-hint">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span data-translate="format_help">Format: MM/DD/YYYY HH:mm:ss [TAB] amount [TAB] symbol</span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="form-actions">
-                            <button type="button" id="loadExample" class="btn btn-secondary">
-                                <i class="fas fa-magic"></i>
+                        <div class="form-actions-premium">
+                            <button type="button" id="loadExample" class="btn-action btn-secondary">
+                                <i class="fas fa-wand-magic-sparkles"></i>
                                 <span data-translate="load_example">Load Example</span>
                             </button>
-                            <button type="submit" class="btn btn-primary" id="convertBtn">
-                                <i class="fas fa-rocket"></i>
-                                <span data-translate="convert_button">Convert to USD</span>
-                                <div class="btn-ripple"></div>
+                            <button type="submit" class="btn-action btn-primary" id="convertBtn">
+                                <span class="btn-label" data-translate="convert_button">Convert to USD</span>
+                                <i class="fas fa-arrow-right"></i>
+                                <div class="btn-shine"></div>
                             </button>
                         </div>
                     </form>
                 </div>
             </section>
 
-            <!-- Loading Animation -->
-            <div id="loadingSection" class="loading-section" style="display: none;">
-                <div class="loader">
-                    <div class="loader-spinner"></div>
-                    <div class="loader-text">
-                        <span id="loadingText" data-translate="loading_text">Converting transactions...</span>
+            <!-- Loading Section -->
+            <div id="loadingSection" class="loading-section-premium" style="display: none;">
+                <div class="loader-premium">
+                    <div class="spinner"></div>
+                    <div class="loader-info">
+                        <p id="loadingText" class="loading-text" data-translate="loading_text">Converting transactions...</p>
                     </div>
                 </div>
                 
-                <div id="progressContainer" class="progress-container" style="display: none;">
-                    <div class="progress-info">
-                        <span id="progressText" data-translate="progress_text">Processing...</span>
-                        <span id="progressPercent">0%</span>
+                <div id="progressContainer" class="progress-section-premium" style="display: none;">
+                    <div class="progress-header">
+                        <span id="progressText" data-translate="progress_text">Processing</span>
+                        <span id="progressPercent" class="progress-percent">0%</span>
                     </div>
-                    <div class="progress-bar">
-                        <div id="progressFill" class="progress-fill"></div>
+                    <div class="progress-bar-premium">
+                        <div id="progressFill" class="progress-fill-premium"></div>
                     </div>
                 </div>
             </div>
 
             <!-- Results Section -->
-            <section id="resultsSection" class="results-section" style="display: none;">
-                <div class="results-header">
-                    <div class="results-title">
+            <section id="resultsSection" class="results-section-premium" style="display: none;">
+                <div class="results-header-premium">
+                    <div class="results-title-group">
                         <i class="fas fa-chart-bar"></i>
-                        <span data-translate="results_title">Conversion Results</span>
+                        <h3 class="results-title" data-translate="results_title">Conversion Results</h3>
                     </div>
                     
-                    <!-- Summary Cards -->
-                    <div class="summary-grid">
-                        <div class="summary-card total">
-                            <div class="summary-icon">
-                                <i class="fas fa-dollar-sign"></i>
+                    <!-- Premium Summary Grid -->
+                    <div class="summary-grid-premium">
+                        <div class="summary-card-premium total">
+                            <div class="card-inner">
+                                <div class="card-icon">
+                                    <i class="fas fa-dollar-sign"></i>
+                                </div>
+                                <div class="card-info">
+                                    <span class="card-label" data-translate="total_value">Total Value</span>
+                                    <div id="totalValue" class="card-value">$0.00</div>
+                                </div>
                             </div>
-                            <div class="summary-content">
-                                <div class="summary-label" data-translate="total_value">Total Value</div>
-                                <div id="totalValue" class="summary-value">$0.00</div>
-                            </div>
+                            <div class="card-accent"></div>
                         </div>
-                        <div class="summary-card success">
-                            <div class="summary-icon">
-                                <i class="fas fa-check-circle"></i>
+                        <div class="summary-card-premium success">
+                            <div class="card-inner">
+                                <div class="card-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="card-info">
+                                    <span class="card-label" data-translate="successful">Successful</span>
+                                    <div id="successCount" class="card-value">0</div>
+                                </div>
                             </div>
-                            <div class="summary-content">
-                                <div class="summary-label" data-translate="successful">Successful</div>
-                                <div id="successCount" class="summary-value">0</div>
-                            </div>
+                            <div class="card-accent"></div>
                         </div>
-                        <div class="summary-card error">
-                            <div class="summary-icon">
-                                <i class="fas fa-exclamation-triangle"></i>
+                        <div class="summary-card-premium error">
+                            <div class="card-inner">
+                                <div class="card-icon">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <div class="card-info">
+                                    <span class="card-label" data-translate="failed">Failed</span>
+                                    <div id="errorCount" class="card-value">0</div>
+                                </div>
                             </div>
-                            <div class="summary-content">
-                                <div class="summary-label" data-translate="failed">Failed</div>
-                                <div id="errorCount" class="summary-value">0</div>
-                            </div>
+                            <div class="card-accent"></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Results List -->
-                <div id="resultsContainer" class="results-container">
+                <!-- Results List with Premium Layout -->
+                <div id="resultsContainer" class="results-list-premium">
                     <!-- Results will be inserted here -->
                 </div>
 
                 <!-- Results Actions -->
-                <div class="results-actions">
-                    <button id="copyBtn" class="btn btn-success">
+                <div class="results-actions-premium">
+                    <button id="copyBtn" class="btn-action btn-success">
                         <i class="fas fa-copy"></i>
                         <span data-translate="copy_results">Copy Results</span>
                     </button>
-                    <button id="clearBtn" class="btn btn-outline">
+                    <button id="clearBtn" class="btn-action btn-outline">
                         <i class="fas fa-trash"></i>
                         <span data-translate="clear_results">Clear Results</span>
                     </button>
@@ -212,51 +219,75 @@
             </section>
 
             <!-- Info Section -->
-            <section class="info-section">
-                <div class="info-grid">
-                    <!-- Supported Formats -->
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-calendar-alt"></i>
+            <section class="info-section-premium">
+                <div class="info-grid-premium">
+                    <!-- Date Formats Card -->
+                    <div class="info-card-premium">
+                        <div class="info-card-header">
+                            <div class="info-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <h4 class="info-title" data-translate="date_formats_title">Supported Date Formats</h4>
                         </div>
-                        <h4 class="info-title" data-translate="date_formats_title">Supported Date Formats</h4>
                         <ul class="info-list">
-                            <li><code>9/8/2025 0:57:11</code> <span data-translate="american_format">American format with seconds</span></li>
-                            <li><code>09/08/2025 00:57:11</code> <span data-translate="zero_padded">Zero-padded format</span></li>
-                            <li><code>9/8/2025 0:57</code> <span data-translate="without_seconds">Without seconds</span></li>
+                            <li>
+                                <code>9/8/2025 0:57:11</code>
+                                <span data-translate="american_format">American format with seconds</span>
+                            </li>
+                            <li>
+                                <code>09/08/2025 00:57:11</code>
+                                <span data-translate="zero_padded">Zero-padded format</span>
+                            </li>
+                            <li>
+                                <code>9/8/2025 0:57</code>
+                                <span data-translate="without_seconds">Without seconds</span>
+                            </li>
                         </ul>
                     </div>
 
-                    <!-- Number Formats -->
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-calculator"></i>
+                    <!-- Number Formats Card -->
+                    <div class="info-card-premium">
+                        <div class="info-card-header">
+                            <div class="info-icon">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <h4 class="info-title" data-translate="number_formats_title">Number Formats</h4>
                         </div>
-                        <h4 class="info-title" data-translate="number_formats_title">Number Formats</h4>
                         <ul class="info-list">
-                            <li><code>15,000.50</code> <span data-translate="comma_thousands">Comma for thousands, dot for decimals</span></li>
-                            <li><code>0.031264</code> <span data-translate="decimal_only">Decimal numbers</span></li>
-                            <li><code>1,234,567.89</code> <span data-translate="large_numbers">Large numbers with commas</span></li>
+                            <li>
+                                <code>15,000.50</code>
+                                <span data-translate="comma_thousands">Comma for thousands, dot for decimals</span>
+                            </li>
+                            <li>
+                                <code>0.031264</code>
+                                <span data-translate="decimal_only">Decimal numbers</span>
+                            </li>
+                            <li>
+                                <code>1,234,567.89</code>
+                                <span data-translate="large_numbers">Large numbers with commas</span>
+                            </li>
                         </ul>
                     </div>
 
-                    <!-- Popular Cryptocurrencies -->
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-coins"></i>
+                    <!-- Cryptocurrencies Card -->
+                    <div class="info-card-premium">
+                        <div class="info-card-header">
+                            <div class="info-icon">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <h4 class="info-title" data-translate="crypto_support_title">Supported Cryptocurrencies</h4>
                         </div>
-                        <h4 class="info-title" data-translate="crypto_support_title">Supported Cryptocurrencies</h4>
-                        <div class="crypto-badges">
-                            <span class="crypto-badge"><i class="fab fa-bitcoin"></i> BTC</span>
-                            <span class="crypto-badge"><i class="fab fa-ethereum"></i> ETH</span>
-                            <span class="crypto-badge">ADA</span>
-                            <span class="crypto-badge">SOL</span>
-                            <span class="crypto-badge">BNB</span>
-                            <span class="crypto-badge">XRP</span>
-                            <span class="crypto-badge">DOT</span>
-                            <span class="crypto-badge">LINK</span>
+                        <div class="crypto-badge-group">
+                            <span class="badge"><i class="fab fa-bitcoin"></i> BTC</span>
+                            <span class="badge"><i class="fab fa-ethereum"></i> ETH</span>
+                            <span class="badge">ADA</span>
+                            <span class="badge">SOL</span>
+                            <span class="badge">BNB</span>
+                            <span class="badge">XRP</span>
+                            <span class="badge">DOT</span>
+                            <span class="badge">LINK</span>
                         </div>
-                        <p class="crypto-note" data-translate="crypto_note">
+                        <p class="info-note" data-translate="crypto_note">
                             + 2000+ other cryptocurrencies via CryptoCompare
                         </p>
                     </div>
